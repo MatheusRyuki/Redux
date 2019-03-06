@@ -29,10 +29,10 @@ class Counter extends Component {
         return (
             <div>
                 <CounterOutput value={this.state.counter} />
-                <CounterControl label="Increment" clicked={() => this.counterChangedHandler( 'inc' )} />
-                <CounterControl label="Decrement" clicked={() => this.counterChangedHandler( 'dec' )}  />
-                <CounterControl label="Add 5" clicked={() => this.counterChangedHandler( 'add', 5 )}  />
-                <CounterControl label="Subtract 5" clicked={() => this.counterChangedHandler( 'sub', 5 )}  />
+                <CounterControl label="Aumentar" clicked={() => this.counterChangedHandler( 'inc' )} />
+                <CounterControl label="Diminuir" clicked={() => this.counterChangedHandler( 'dec' )}  />
+                <CounterControl label="Aumentar 5" clicked={() => this.counterChangedHandler( 'add', 5 )}  />
+                <CounterControl label="Diminuir 5" clicked={() => this.counterChangedHandler( 'sub', 5 )}  />
             </div>
         );
     }
