@@ -8,16 +8,16 @@ export const saveResult = (res) => {
 }
 
 export const storeResult = (res) => {
-    return dispatch => {
+    return (dispatch, getState) => {
         setTimeout(() => {
             dispatch(saveResult(res))
-        }, 2000);
+        }, 500);
     }   
 };
 
 export const deleteResult = (resElId) => {
     return {
         type: actionTypes.DELETE_RESULT,
-        resultElId: resElId
+        resultId: resElId
     }
 };
