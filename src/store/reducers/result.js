@@ -11,14 +11,14 @@ const deleteResult = (state, action) => {
 }
 
 const reducer = (state = initialState, action) => {
-  // eslint-disable-next-line default-case
   switch (action.type) {
     case actionTypes.STORE_RESULT:
       return updateObject(state, { counter: 0, results: state.results.concat({ id: new Date(), value: action.result }) });
     case actionTypes.DELETE_RESULT:  
       return deleteResult(state, action);
+    default:
+      return state;
   }
-  return state;
 };
 
 export default reducer;
